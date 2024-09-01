@@ -182,7 +182,6 @@ header {
   .navbar {
     flex-direction: column;
     justify-content: space-between;
-    align-content: ;
   }
 
   .navbar li {
@@ -224,5 +223,55 @@ header {
 
   .article {
     width: 50%;
+  }
+}
+
+/* BONUS*/
+
+.burger-menu {
+  visibility: hidden;
+  opacity: 0;
+  height: 0%;
+}
+
+@media (max-width: 480px) {
+  .newspaper-name {
+    border-bottom: none;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 50px
+  }
+
+  .burger-menu {
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+  }
+
+  .burger-menu div {
+    width: 30px;
+    height: 4px;
+    background-color: black;
+    margin: 6px;
+  }
+
+  .navbar {
+  opacity: 0;
+  visibility: hidden;
+  height: 0%;
+  }
+
+  nav:hover .navbar {
+    opacity: 100%;
+    visibility: visible;
+    height: auto;
+    position: absolute;
+    top: 98px;
+    background-color: #333;
   }
 }
